@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import edu.elsmancs.cotxox.carrera.Carrera;
+
 public class TestMain {
 
 	Carrera carrera;
@@ -44,6 +46,14 @@ public class TestMain {
 		assertEquals("Aeroport Son Sant Joan", carrera.getOrigen());
 		assertEquals("Magaluf", carrera.getDestino());
 		assertEquals(7.75, carrera.getDistancia());
+	}
+	
+	@Test
+	public void getCosteEstimado() {
+		Carrera carreraLocal = new Carrera("5432123454321234");
+		carrera.setDistancia(10);
+		carrera.setTiempoEsperado(20);
+		assertEquals(carreraLocal.getCosteEsperado(), (10*1.35)+(20*0.35));
 	}
 
 }

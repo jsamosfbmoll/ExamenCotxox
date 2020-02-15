@@ -1,6 +1,7 @@
 package edu.elsmancs.cotxox.main;
 
 import java.util.ArrayList;
+import edu.elsmancs.cotxox.carrera.Carrera;
 
 public class Cotxox {
 
