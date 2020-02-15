@@ -1,5 +1,7 @@
 package edu.elsmancs.cotxox.carrera;
 
+import edu.elsmancs.cotxox.conductores.Conductor;
+import edu.elsmancs.cotxox.conductores.PoolConductores;
 import edu.elsmancs.cotxox.tarifa.Tarifa;
 
 public class Carrera {
@@ -10,6 +12,7 @@ public class Carrera {
 	private double distancia = 0.0;
 	private int tiempoEsperadoMinutos = 0;
 	private double costeTotal = 0.0;
+	private Conductor conductor;
 
 	public Carrera(String tarjetaDeCredito) {
 		this.tarjetaCredito = tarjetaDeCredito;
@@ -62,5 +65,9 @@ public class Carrera {
 	
 	public void recibirPropina(double propina) {
 		this.costeTotal += propina;
+	}
+
+	public void asignarConductor(PoolConductores conductores) {
+		conductor = conductores.asignarConductor();
 	}
 }

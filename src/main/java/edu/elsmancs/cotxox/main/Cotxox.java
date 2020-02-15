@@ -2,6 +2,8 @@ package edu.elsmancs.cotxox.main;
 
 import java.util.ArrayList;
 import edu.elsmancs.cotxox.carrera.Carrera;
+import edu.elsmancs.cotxox.conductores.Conductor;
+import edu.elsmancs.cotxox.conductores.PoolConductores;
 
 public class Cotxox {
 
@@ -46,7 +48,7 @@ public class Cotxox {
 		 * para ofrecer el servicio.
 		 * La flota es un objeto de tipo PoolConductores.
 		 */
-/*
+
 		ArrayList<Conductor> poolConductores = new ArrayList<>();
 		Conductor conductor = null;
 
@@ -76,8 +78,8 @@ public class Cotxox {
 		PoolConductores conductores = new PoolConductores(poolConductores);
 
 		/* Seleccion del conductor en la flota y asignacion a la carrera */
-/*
-		carrera.asignarConductor(conductores);*/
+
+		carrera.asignarConductor(conductores);
 
 		// Info por pantalla
 /*
