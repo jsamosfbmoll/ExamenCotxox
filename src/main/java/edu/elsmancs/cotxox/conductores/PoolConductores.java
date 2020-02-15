@@ -13,6 +13,7 @@ public class PoolConductores {
 	public Conductor asignarConductor() {
 		for (Conductor conductor : this.poolConductores) {
 			if (conductor != null) {
+				conductor.setOcupado(true);
 				return conductor;
 			}
 		}

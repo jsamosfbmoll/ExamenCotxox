@@ -13,6 +13,7 @@ public class Carrera {
 	private int tiempoEsperadoMinutos = 0;
 	private double costeTotal = 0.0;
 	private Conductor conductor;
+	private double propina = 0.0;
 
 	public Carrera(String tarjetaDeCredito) {
 		this.tarjetaCredito = tarjetaDeCredito;
@@ -64,10 +65,28 @@ public class Carrera {
 	}
 	
 	public void recibirPropina(double propina) {
-		this.costeTotal += propina;
+		this.propina += 1;
+	}
+	
+	public double getPropina() {
+		return this.propina;
+	}
+	
+	public double getCosteTotal() {
+		return this.costeTotal;
 	}
 
 	public void asignarConductor(PoolConductores conductores) {
 		conductor = conductores.asignarConductor();
+	}
+	
+	public Conductor getConductor() {
+		return this.conductor;
+	}
+
+	public void liberarConductor() {
+		this.conductor.setOcupado(false);
+		//this.conductor = null;
+		//No sé si es necesario poner el conductor como null
 	}
 }

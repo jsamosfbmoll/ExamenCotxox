@@ -82,7 +82,7 @@ public class Cotxox {
 		carrera.asignarConductor(conductores);
 
 		// Info por pantalla
-/*
+
 		System.out.println("Driver: " + carrera.getConductor().getNombre());
 		System.out.println("Type: " + carrera.getConductor().getModelo());
 		System.out.println("Matricula: " + carrera.getConductor().getMatricula());
@@ -115,6 +115,6 @@ public class Cotxox {
 		carrera.getConductor().setValoracion((byte) 5);
 
 		System.out.println("Driver: " + carrera.getConductor().getNombre());
-		System.out.println("Stars: " + carrera.getConductor().getValoracion());*/
+		System.out.println("Stars: " + carrera.getConductor().getValoracion());
 	}
 }
