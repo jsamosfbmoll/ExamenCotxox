@@ -21,7 +21,7 @@ public class Tarifa {
 		double distanciaCoste = this.getCosteDistancia(carrera.getDistancia());
 		double tiempoCoste = this.getCosteTiempo(carrera.getTiempoEsperado());
 		double costeEsperado = distanciaCoste + tiempoCoste;
-		return costeEsperado >= 5.0? costeEsperado : 5.0;
+		return costeEsperado >= costeMinimo? costeEsperado : 5.0;
 	}
 	
 	
