@@ -45,7 +45,7 @@ public class TestMain {
 		assertEquals("4916119711304546", carrera.getTarjetaCredito());
 		assertEquals("Aeroport Son Sant Joan", carrera.getOrigen());
 		assertEquals("Magaluf", carrera.getDestino());
-		assertEquals(7.75, carrera.getDistancia());
+		assertEquals(7.75, carrera.getDistancia(), 0);
 	}
 	
 	@Test
@@ -53,7 +53,7 @@ public class TestMain {
 		Carrera carreraLocal = new Carrera("5432123454321234");
 		carrera.setDistancia(10);
 		carrera.setTiempoEsperado(20);
-		assertEquals(carreraLocal.getCosteEsperado(), (10*1.35)+(20*0.35));
+		assertEquals(carreraLocal.getCosteEsperado(), (10*1.35)+(20*0.35), 0);
 	}
 
 }
